@@ -1,0 +1,38 @@
+import { capitalize, reverseString } from "./modules/stringUtils.js";
+import { Finance } from "./modules/finance.js";
+import { UserManagement } from "./modules/userManagement.js";
+import {
+  generateFibonacci,
+  generatePrimeNumbers,
+} from "./modules/sequenceUtils.js";
+
+console.log("TASK 1");
+console.log(capitalize("acab"));
+console.log(reverseString("hello"));
+
+console.log("TASK 2");
+const loan = new Finance.LoanCalculator(10000, 12);
+console.log("Ежемесячный платёж:", loan.getCredit());
+
+const tax = new Finance.TaxCalculator(50000);
+console.log("Налог на доход:", tax.getTax());
+
+console.log("TASK 3");
+const admin1 = new UserManagement.Admin.AdminUser("Иван", "ivan@example.com");
+console.log(admin1.getInfo());
+admin1.toggleSuperAdmin();
+console.log(admin1.getInfo());
+const admin2 = new UserManagement.Admin.AdminUser(
+  "Мария",
+  "maria@example.com",
+  true
+);
+console.log(admin2.getInfo());
+
+console.log("TASK 4");
+const num = 50;
+const fibSequence = generateFibonacci(num);
+console.log(`Фибоначчи до ${num}:`, fibSequence);
+
+const primeNumbers = generatePrimeNumbers(num);
+console.log(`Простые числа до ${num}:`, primeNumbers);
