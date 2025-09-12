@@ -1,0 +1,1 @@
+{"version":3,"file":"dotenv.config.js","sourceRoot":"","sources":["../../src/config/dotenv.config.ts"],"names":[],"mappings":"AAAA,OAAO,MAAM,MAAM,QAAQ,CAAC;AAE5B,MAAM,CAAC,MAAM,EAAE,CAAC","sourcesContent":["import dotenv from \"dotenv\";\n\ndotenv.config();\n"]}
