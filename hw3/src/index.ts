@@ -23,7 +23,7 @@ interface Car {
   year?: number;
 }
 
-const car1 = {
+const car1: Car = {
   make: "Toyota",
   model: "Camry",
   engine: {
